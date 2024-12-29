@@ -1,0 +1,4 @@
+dependencies {
+    implementation project(":common")
+    implementation 'it.ohalee.ultimatematchmaking:instance:1.0'
+}

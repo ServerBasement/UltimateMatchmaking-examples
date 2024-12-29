@@ -1,0 +1,39 @@
+plugins {
+    id 'java'
+    id 'maven-publish'
+}
+
+subprojects {
+    apply plugin: 'java'
+
+    group = 'it.ohalee.ultimatematchmaking-examples'
+    version = '1.0'
+
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+
+    tasks.withType(JavaCompile).configureEach {
+        options.encoding = "UTF-8"
+    }
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        maven { url 'https://repo.papermc.io/repository/maven-public/' }
+        maven { url = 'https://oss.sonatype.org/content/groups/public/' }
+    }
+
+    dependencies {
+        compileOnly 'com.destroystokyo.paper:paper-api:1.15.2-R0.1-SNAPSHOT'
+
+        implementation 'it.ohalee.ultimatematchmaking:common:1.0'
+        compileOnly 'it.ohalee.basementlib:api-bukkit:1.0.0'
+
+        compileOnly 'org.projectlombok:lombok:1.18.36'
+        annotationProcessor 'org.projectlombok:lombok:1.18.36'
+
+        testCompileOnly 'org.projectlombok:lombok:1.18.36'
+        testAnnotationProcessor 'org.projectlombok:lombok:1.18.36'
+    }
+
+}

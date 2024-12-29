@@ -1,0 +1,5 @@
+name: PixelMasterExample
+main: it.ohalee.ultimatematchmaking.example.master.Main
+version: 1.0
+depend:
+  - BasementLib

@@ -1,0 +1,5 @@
+name: PixelInstanceExample
+main: it.ohalee.ultimatematchmaking.example.instance.Main
+version: 1.0
+depend:
+  - BasementLib

@@ -1,0 +1,5 @@
+rootProject.name = 'UltimateMatchmaking-Examples'
+include 'master'
+include 'instance'
+include 'common'
+
